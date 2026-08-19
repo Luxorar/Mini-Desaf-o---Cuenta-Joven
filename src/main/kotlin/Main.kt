@@ -6,13 +6,19 @@ fun main(){
 
     val cuentaCorriente = CuentaCorriente(2001,cliente,100000.0,500000.0)
 
+    val cuentaJoven = CuentaJoven(1001,cliente,10000.0,15.4)
+
+
     //Polimorfismo
     val cuentas: List<CuentaBancaria> = listOf(
         cuentaCorriente,
-        cuentaAhorro
+        cuentaAhorro,
+        cuentaJoven
     )
-
+     var i = 0
     for(cuenta in cuentas){
+        i ++
+        println("Cuenta $i")
         cuenta.mostraTipoCuenta()
     }
 
@@ -30,4 +36,5 @@ fun main(){
     }
 
     println("Programa finalizado")
+
 }
